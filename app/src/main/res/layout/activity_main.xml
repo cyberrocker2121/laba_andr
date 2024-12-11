@@ -1,0 +1,126 @@
+<!-- Основной макет, который содержит все элементы интерфейса -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3772E7"
+    android:orientation="vertical">
+
+    <!-- Контейнер для настроек с выравниванием элементов -->
+    <RelativeLayout
+        android:id="@+id/settings_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp">
+
+        <!-- Кнопка настроек, в текущий момент невидимая -->
+        <Button
+            android:id="@+id/settings_icon"
+            android:background="#FFFFFF"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:visibility="invisible"
+            />
+
+        <!-- Текстовый элемент с заголовком настроек -->
+        <TextView
+            android:id="@+id/settings_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_main"
+            android:textSize="22sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="12dp"
+            />
+
+        <!-- Выпадающий список, привязанный к заголовку, но невидимый -->
+        <Spinner
+            android:id="@+id/toolbar_spinner"
+            android:layout_width="20dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginEnd="75dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="15dp"
+            android:layout_toEndOf="@id/settings_label"
+            android:spinnerMode="dropdown"
+            android:visibility="invisible"/>
+
+        <!-- Дополнительная кнопка, расположенная справа, невидимая -->
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+
+    <!-- Первая кнопка, оформленная как основная -->
+    <Button
+        android:id="@+id/materialButton"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:background="@drawable/shape_rounded"
+        android:text="@string/button_search"
+        android:textAllCaps="false"
+        android:textColor="#1A1B22"
+        android:textSize="22sp"
+        app:backgroundTint="@null"
+        app:icon="@drawable/ic_search"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        app:iconTint="#1A1B22"
+        />
+
+    <!-- Вторая кнопка, оформленная аналогично первой -->
+    <Button
+        android:id="@+id/materialButton1"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:background="@drawable/shape_rounded"
+        android:text="@string/button_medialib"
+        android:textAllCaps="false"
+        android:textColor="#1A1B22"
+        android:textSize="22sp"
+        app:backgroundTint="@null"
+        app:icon="@drawable/ic_medialib"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        app:iconTint="#1A1B22"
+        app:layout_constraintTop_toBottomOf="@+id/materialButton"
+        />
+
+    <!-- Третья кнопка, аналогичная предыдущим, расположена ниже -->
+    <Button
+        android:id="@+id/materialButton2"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:background="@drawable/shape_rounded"
+        android:text="@string/button_setting"
+        android:textAllCaps="false"
+        android:textColor="#1A1B22"
+        android:textSize="22sp"
+        app:backgroundTint="@null"
+        app:icon="@drawable/ic_setting"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        app:iconTint="#1A1B22"
+        />
+
+</LinearLayout>
